@@ -1,0 +1,26 @@
+@import '~antd/dist/antd.css';
+body {
+  margin:0 auto;
+  font-size: 16px;
+  position: relative;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: #000;
+}
+a:hover{
+  color: #000;
+}
+.min_font {
+  font-size: 12px !important;
+}
+.max_font {
+  font-size: 20px !important;
+}
+.blank{
+  height: 30px;
+}

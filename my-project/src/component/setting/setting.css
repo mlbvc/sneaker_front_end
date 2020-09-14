@@ -1,0 +1,51 @@
+.setting_page{
+  padding: 0 60px;
+}
+.setting_title{
+  margin: 0 0 80px 0;
+}
+.setting_container{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.left_list{
+  width: 240px;
+}
+.left_item{
+  height: 50px;
+  /* line-height: 50px;
+  vertical-align: middle; */
+  border-bottom: 2px solid#f5f5f5;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.left_img{
+  padding: 0 20px;
+}
+.icon{
+  width: 30px;
+  height: 30px;
+}
+.setting_account{
+
+}
+.ant-form-item-label > label{
+  font-size: 20px !important;
+}
+.ant-form-item-label{
+  font-size: 20px !important;
+}
+.ant-input{
+  border-color: lightgray;
+  text-shadow: none;
+  height: 60px;
+}
+.ant-input:active{
+  border-color: #000;
+  text-shadow: none;
+}
+.ant-input:hover{
+  border-color: #000;
+  text-shadow: none;
+}

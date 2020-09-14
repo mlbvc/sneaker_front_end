@@ -1,0 +1,21 @@
+
+.member_intro{
+  padding: 0 60px;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.member_avatar{
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 50px;
+}
+.member_name{
+  margin-left: 40px;
+}
+.vip{
+  padding: 0 60px;
+  margin-top: 60px;
+}
