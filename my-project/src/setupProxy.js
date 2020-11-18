@@ -5,8 +5,8 @@ module.exports = function (app) {
   // target 表示目标服务器的地址
   app.use(
     createProxyMiddleware('/api', {
-      // http://localhost:4000/ 地址只是示例，实际地址以项目为准
-      target: 'http://localhost:8000',
+      // target: 'http://localhost:8000',
+      target: 'http://192.168.3.4:8000',
       // 跨域时一般都设置该值 为 true
       changeOrigin: true,
       // 重写接口路由
