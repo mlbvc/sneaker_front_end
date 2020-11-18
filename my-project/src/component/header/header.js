@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Input, Button, message, Popover } from 'antd';
+import { Form, Input, Button, message, Popover, Layout } from 'antd';
 import * as Res from '../../resRoot';
 import { setToken, getToken, clearToken } from '../../utils/auth';
 import { userLogin, userRegister, getParentList } from '../../utils/request';
 import "./header.css";
+const { Header } = Layout;
 
-export const Header = (props) => {
-  console.log(props)
+export const HeaderPage = (props) => {
   const [hover, setHover] = useState(false);
   const [isClickLogin, setIsClickLogin] = useState(false);
   const [isClickRegister, setIsRegister] = useState(false);
@@ -135,7 +135,9 @@ export const Header = (props) => {
     )
   }
 
-  //渲染登陆页面
+  /**
+   * 渲染登陆页面
+   */
   const renderLoginPage = () => {
     return (
       isClickLogin &&
@@ -194,7 +196,9 @@ export const Header = (props) => {
     )
   }
 
-  //渲染注册页面
+  /**
+   * 渲染注册页面
+   */
   const renderRegisterPage = () => {
     return (
       isClickRegister &&
@@ -254,7 +258,9 @@ export const Header = (props) => {
     )
   }
 
-  //渲染header组件
+  /**
+   * 渲染header组件
+   */
   return (
     <div>
       <div className="top_fixed min_font">
@@ -272,13 +278,6 @@ export const Header = (props) => {
           :<div className="top_fixed_text" onClick={() => popUpLogin()}>登录</div>
         }
       </div>
-      {/* <div className={styles.top_fixed}>
-          <div className={styles.top_fixed_text}>帮助</div>
-          <div className={styles.top_fixed_text}>|</div>
-          <div className={styles.top_fixed_text}>立即加入</div>
-          <div className={styles.top_fixed_text}>|</div>
-          <div className={styles.top_fixed_text}>登录</div>
-        </div> */}
       <div className='nav'>
         <div className="nike_img">
           <svg height="60px" width="60px" fill="#111" viewBox="0 0 69 32">
@@ -305,12 +304,12 @@ export const Header = (props) => {
           <input type="search" placeholder="搜索"></input>
         </div>
       </div>
-      {renderHoverPage()}
+      { renderHoverPage() }
       <div className="banner"></div>
-      {renderLoginPage()}
-      {renderRegisterPage()}
+      { renderLoginPage() }
+      { renderRegisterPage() }
     </div>
   )
 }
 
-export default Header
+export default HeaderPage

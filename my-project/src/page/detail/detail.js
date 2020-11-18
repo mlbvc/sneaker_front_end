@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../component/header/header';
+import HeaderPage from '../../component/header/header';
 import { getProductList } from '../../utils/request'
 import './detail.css'
 
 export const Detail = (props) => {
   const [productInfo, setProductInfo] = useState([]);
-  const id = props.match.params.product_id;
+  const id = props.match.params.id;
 
   useEffect(() => {
     getProductList({ product_id: id }).then((res) => {
@@ -15,10 +15,15 @@ export const Detail = (props) => {
     });
   }, []);
 
-  console.log(props)
+  const goToCart = () => {
+    props.history.push({
+      pathname: '/cart/' + id,
+    })
+  };
+
   return (
     <div>
-      <Header {...props}></Header>
+      <HeaderPage {...props}></HeaderPage>
       <div className="blank"></div>
       <div className="product_container max_font">
         <div className="display_product">
@@ -32,7 +37,7 @@ export const Detail = (props) => {
           <div>
             <h2>{productInfo.product_name}</h2>
           </div>
-          <button className="cart">购物车</button>
+          <button className="cart" onClick={() => goToCart(productInfo.product_id)}>购物车</button>
           <button className="collection">收藏</button>
           <div className="prodcut_desc">{productInfo.description}</div>
         </div>

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { getProductList, getCategoryList} from '../../utils/request'
 import './aside.css';
 
-export const Aside = (props) => {
+export const AsidePage = (props) => {
   const [allProductData, setAllProductData] = useState([]);
   const [allCategory, setAllCategory] = useState([]);
+  const [isShow, setIsShow] = useState(true)
 
   useEffect(() => {
     getProductList().then((res) => {
@@ -19,7 +20,9 @@ export const Aside = (props) => {
     })
   },[])
 
-  // 点击跳转
+  /**
+   * 点击跳转到商品详情页
+   */
   const goDetailPage = (id, product) => {
     props.history.push({
       pathname: '/detail/' + id,
@@ -27,10 +30,12 @@ export const Aside = (props) => {
     })
   }
 
-  // 渲染分类
+  /**
+   * 渲染分类列表
+   */
   const renderCategoryList = () => {
     return (
-      <div className="category_list">
+      isShow && <div className="category_list">
         {
           allCategory.map((item, index) => {
             return (
@@ -42,7 +47,9 @@ export const Aside = (props) => {
     )
   }
 
-  //渲染产品
+  /**
+   * 渲染商品列表
+   */
   const renderProductList = () => {
     return (
       <div className="product_list">
@@ -55,14 +62,20 @@ export const Aside = (props) => {
                 </div>
                 {
                   item.is_on_the_shelf ?
-                    <div className="is_new">
-                      新品上市
+                  <div className="is_new">
+                    新品上市
                   </div>
-                    : null
+                  : null
                 }
-                <div className="product_name">{item.product_name}</div>
-                <div className="product_name">{item.color}</div>
-                <div className="product_price">{'￥' + item.price}</div>
+                <div className="product_name">
+                  {item.product_name}
+                </div>
+                <div className="product_name">
+                  {item.color}
+                </div>
+                <div className="product_price">
+                  {'￥' + item.price}
+                </div>
               </div>
             )
           })
@@ -75,10 +88,18 @@ export const Aside = (props) => {
     <div className="container">
       <div className="blank"></div>
       <div className="container_middle">
-        <div className="all_product"><h2>所有产品</h2></div>
+        <div className="all_product">
+          <h2>
+            所有产品
+          </h2>
+        </div>
         <div className="fixed_right">
-          <div className="condition">筛选条件</div>
-          <div className="sort"> 排序依据</div>
+          <div className="condition" onClick={() => {setIsShow(!isShow)}}>
+            筛选条件
+          </div>
+          <div className="sort">
+            排序依据
+          </div>
         </div>
       </div>
       <div className="blank"></div>
@@ -90,4 +111,4 @@ export const Aside = (props) => {
   )
 }
 
-export default Aside
+export default AsidePage

@@ -1,9 +1,5 @@
 .footer{
   background-color: #111;
-  position: absolute;
-  bottom: -300px;
-  left: 0;
-  right: 0;
   height: 300px;
   color: white;
 }

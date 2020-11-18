@@ -31,7 +31,7 @@
   height: 50px;
   color: white;
   border: none;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   background-color: #000;
   font-size: 16px;
   margin-top: 20px;
@@ -44,7 +44,7 @@
   height: 50px;
   color: #000;
   border: none;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   background-color: #fff;
   font-size: 16px;
   margin-top: 20px;

@@ -1,35 +1,35 @@
 import React from 'react';
-import './footer.css'
+import './footer.css';
 
-export const Footer = (props) => {
+export const FooterPage = (props) => {
   return (
     <div className="footer">
       <div className="footer_list">
         <div className="footer_item">
           <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
+            <li>电子礼品卡</li>
+            <li>企业团购</li>
+            <li>附近商店</li>
+            <li>注册Nike会员</li>
+            <li>向我们反馈</li>
           </ul>
         </div>
         <div className="footer_item">
           <ul>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
+            <li>获得帮助</li>
+            <li>订单状态</li>
+            <li>配送方式</li>
+            <li>退换货</li>
+            <li>联系我们</li>
           </ul>
         </div>
         <div className="footer_item">
           <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
+            <li>关于Nike</li>
+            <li>新闻</li>
+            <li>投资者</li>
+            <li>新品预览</li>
+            <li></li>
           </ul>
         </div>
       </div>
@@ -39,4 +39,4 @@ export const Footer = (props) => {
     </div>
   );
 }
-export default Footer
+export default FooterPage

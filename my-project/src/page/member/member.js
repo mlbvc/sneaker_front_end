@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../component/header/header';
+import HeaderPage from '../../component/header/header';
 import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 import Profile from '../../component/profile/profile';
 import Setting from '../../component/setting/setting';
@@ -8,10 +8,9 @@ import Order from '../../component/order/order';
 import './member.css';
 
 export const Member = (props) => {
-  console.log(props.match.path)
   return (
     <div>
-      <Header {...props}></Header>
+      <HeaderPage {...props}></HeaderPage>
       <div className="operation_list max_font">
         <Link to='/member/profile'>
           <div className="operation_item">资料</div>

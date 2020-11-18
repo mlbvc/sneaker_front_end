@@ -1,10 +1,10 @@
 .container {
   margin: 0 auto;
-  position: absolute;
+  /* position: absolute;
   top: 172px;
   left: 0;
   bottom: 0;
-  right: 0;
+  right: 0; */
 }
 .container_middle {
   display: flex;

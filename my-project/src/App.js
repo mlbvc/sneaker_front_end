@@ -22,6 +22,11 @@ const MemberPage = Loadable({
   loading: AppLoading
 })
 
+const CartPage = Loadable({
+  loader: () => import('./page/cart/cart'),
+  loading: AppLoading
+})
+
 // const profilePage = Loadable({
 //   loader: () => import('./page/member/profile'),
 //   loading: AppLoading
@@ -33,8 +38,9 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={MainPage}/>
-          <Route exact path="/detail/:product_id" component={DetailPage}/>
+          <Route exact path="/detail/:id" component={DetailPage}/>
           <Route path="/member" component={MemberPage} />
+          <Route path="/cart/:id" component={CartPage} />
           {/* <Route exact path="/member/profile" component={profilePage} /> */}
         </Switch>
         {/* <Redirect to="/404" /> */}

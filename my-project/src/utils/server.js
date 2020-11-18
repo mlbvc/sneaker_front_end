@@ -31,7 +31,6 @@ axios.interceptors.response.use(
     // if (response.data.errCode === 2) {
     //   console.log("过期");
     // }
-    console.log('response', response)
     return response;
   },
   (error) => {
